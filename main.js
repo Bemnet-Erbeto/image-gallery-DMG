@@ -44,6 +44,7 @@ function handleAlbumChange (event) {
     const selectedAlbum = albums.find(albumFolderByUserChoice)
     const parentElement = document.querySelector("main")
     // replace children with nothing. this will help with the problem of having repet of image.
+    // remove the current contents of <main>, so we don't keep adding tons of images, we're removing the old images first. 
     parentElement.replaceChildren()
     for (const path of selectedAlbum.paths) {
         // VISUALIZE THE GOAL: <img class="card" src="insert-image-path-here">
